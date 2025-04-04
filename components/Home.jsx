@@ -1,6 +1,12 @@
+'use client'
+import Link from 'next/link';
 import React from 'react'
 
 const Home = () => {
+    const openVideoInNewTab = () => {
+        const videoUrl = 'https://media1.tenor.com/m/vE8oU6hyQacAAAAC/azumanga-azumanga-daioh.gif';
+        window.open(videoUrl, '_blank', 'noopener,noreferrer');
+      };
   return (
     <div className='flex flex-col items-center md:p-20 p-10 min-h-screen'>
     <div className='flex justify-center items-start md:space-x-24 space-x-10'>
@@ -22,10 +28,10 @@ const Home = () => {
                 <img src='/folder.png' className='w-24' />
                 <p>profile</p>
             </div>
-            <div className='text-black text-center font-medium'>
+            <Link href='/random' className='text-black text-center font-medium'>
                 <img src='/folder.png' className='w-24' />
                 <p>random</p>
-            </div>
+            </Link>
         </div>
     </div>
     <div className='font-[PPMondwest] text-black text-3xl pt-4 max-w-xl'>
